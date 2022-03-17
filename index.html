@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+    </head>
+    <body>
+        <center style="margin-top: 40px;" >
+            <h1>My Family Book</h1>
+            <img src="https://i.postimg.cc/v8CnSJFX/family.jpg" id="family_member_image" width="150px;" height="200px;">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+
+            
+        </center>
+
+        <script >
+             var family_img= ["https://i.postimg.cc/v8CnSJFX/family.jpg","https://i.postimg.cc/sxxJ97WX/img1.jpg","https://i.postimg.cc/85KR5cYV/img2.jpg" , "https://i.postimg.cc/YS8gnjMm/img3.jpg" , "https://i.postimg.cc/sDFcZQXV/img4.jpg" ] 
+             
+             var names= ["Family Book","Pravin Wani" , "Priya Wani" , "Sanvi Wani" , "Shriya Wani"];
+             var i= 0;
+             function update(){
+                 i++;
+                 var number_of_people_in_family= 4
+                 if (i>number_of_people_in_family)
+                 {i=0;}
+             
+             var update_family_img=family_img[i];
+             var update_name=names[i];
+             document.getElementById("family_member_image").src=update_family_img;
+             document.getElementById("family_member_name").innerHTML=update_name;
+            }
+        </script>
+    </body>
+</html>
